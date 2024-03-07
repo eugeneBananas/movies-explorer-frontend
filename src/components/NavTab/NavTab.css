@@ -1,0 +1,24 @@
+.navtab{
+  height: 66px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 245, 245, 1);
+}
+
+.navtab__link{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  border-bottom: 1px solid black;
+}
+
+@media all and (max-width: 480px){
+  .navtab__link{
+    font-size: 11px;
+  }
+}
