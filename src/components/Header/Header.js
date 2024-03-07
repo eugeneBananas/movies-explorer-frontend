@@ -23,10 +23,12 @@ function Header() {
   }, []);
 
   return (
-    <header className={`header ${location.pathname === "/" && "header_startpage"}`}>
+    <header
+      className={`header ${location.pathname === "/" && "header_startpage"}`}
+    >
       <section className="header__container">
         <img src={logo} className="header__logo" alt="Логотип" />
-        {userStatement && (
+        {userStatement && windowSize > 1279 && (
           <nav className="header__menu">
             <Link
               to="/movies"
@@ -39,7 +41,8 @@ function Header() {
             <Link
               to="/saved-movies"
               className={`header__option ${
-                location.pathname === "/saved-movies" && "header__option_is_active"
+                location.pathname === "/saved-movies" &&
+                "header__option_is_active"
               }`}
             >
               Сохраненные фильмы
@@ -57,7 +60,7 @@ function Header() {
             Войти
           </Link>
         </nav>
-      ) : (windowSize > 1279 ? (
+      ) : windowSize > 1279 ? (
         <Link to="/profile" className="header__button">
           <img className="header__account" src={profile} alt="Аккаунт" />
           <p className="header__button-text">Аккаунт</p>
@@ -74,7 +77,9 @@ function Header() {
             <div>
               <li className="header__li-element">
                 <Link
-                  className={`header__link-element ${location.pathname === "/" && "header__link-element_chosen"}`}
+                  className={`header__link-element ${
+                    location.pathname === "/" && "header__link-element_chosen"
+                  }`}
                   to="/"
                 >
                   Главная
@@ -82,7 +87,10 @@ function Header() {
               </li>
               <li className="header__li-element">
                 <Link
-                  className={`header__link-element ${location.pathname === "/movies" && "header__link-element_chosen"}`}
+                  className={`header__link-element ${
+                    location.pathname === "/movies" &&
+                    "header__link-element_chosen"
+                  }`}
                   to="/movies"
                 >
                   Фильмы
@@ -90,7 +98,10 @@ function Header() {
               </li>
               <li className="header__li-element">
                 <Link
-                  className={`header__link-element ${location.pathname === "/saved-movies" && "header__link-element_chosen"}`}
+                  className={`header__link-element ${
+                    location.pathname === "/saved-movies" &&
+                    "header__link-element_chosen"
+                  }`}
                   to="/saved-movies"
                 >
                   Сохраненные фильмы
@@ -98,14 +109,17 @@ function Header() {
               </li>
             </div>
             <li className="header__li-element">
-              <Link to="/profile" className="header__button header__button_in_burger">
+              <Link
+                to="/profile"
+                className="header__button header__button_in_burger"
+              >
                 <img className="header__account" src={profile} alt="Аккаунт" />
                 <p className="header__button-text">Аккаунт</p>
               </Link>
             </li>
           </div>
         </div>
-      ))}
+      )}
     </header>
   );
 }
