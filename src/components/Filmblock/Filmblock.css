@@ -59,3 +59,9 @@
 .filmblock_saved{
     padding-bottom: 140px;
 }
+
+@media all and (max-width: 650px){
+    .filmblock_saved{
+        padding-bottom: 170px;
+    }
+}

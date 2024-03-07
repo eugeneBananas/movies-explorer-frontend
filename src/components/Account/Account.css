@@ -127,9 +127,9 @@
     line-height: 16px;
     text-align: center;
     width: 150px;
-    height: 16px;
     text-decoration: none;
     color: rgba(238, 52, 101, 1);
+    margin-bottom: 70px;
 }
 
 @media all and (max-width: 768px){
@@ -142,7 +142,7 @@
     .account__exit{
         font-size: 12px;
         line-height: 15px;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
 }
 

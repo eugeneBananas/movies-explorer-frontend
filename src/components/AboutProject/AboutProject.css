@@ -34,7 +34,7 @@
 @media all and (max-width: 480px){
   .aboutproject__grid{
     margin-top: 60px;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto;
     gap: 16px;

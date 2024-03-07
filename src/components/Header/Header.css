@@ -84,13 +84,13 @@
 
 .header__button_in_burger{
   margin: 0;
-  margin-bottom: 78px;
+  margin-bottom: 68px;
 }
 
 @media all and (max-width: 620px){
   .header__button_in_burger{
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 46px;
   }
 }
 
@@ -282,7 +282,7 @@
 @media all and (max-width: 620px){
   .header__menu-items{
     transform: translateX(100vw);
-    width: 135vw;
+    width: 149vw;
     padding-top: 144px;
     height: calc(100vh - 110px);
   }
@@ -304,6 +304,7 @@
   text-decoration: none;
   color: #000000;
   padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
 }
 
 .header__link-element_chosen {

@@ -103,7 +103,7 @@
 
 @media all and (max-width: 768px){
   .techs__technologies{
-    margin-top: 83px;
+    margin: 83px 52px 0;
   }
 }
 
@@ -141,6 +141,13 @@
     font-size: 12px;
     line-height: 15px;
   }
+}
+
+@media all and (max-width: 480px){
+  .techs__technology{
+    width: 84px;
+    height: 57px;
+}
 }
 
 @media all and (max-width: 325px){
