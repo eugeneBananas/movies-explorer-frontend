@@ -26,4 +26,4 @@
 
 Бын выбран макет light-3
 
-https://mesto-eugenebananas.nomoredomainswork.ru/
+https://movie-eugenebananas.nomoredomainswork.ru/
