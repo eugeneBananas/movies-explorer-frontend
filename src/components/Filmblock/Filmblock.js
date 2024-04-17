@@ -19,7 +19,7 @@ function Filmblock({ isSaved }) {
   };
 
   return (
-    <section className={`filmblock ${location.pathname === '/saved-movies' && "filmblock_saved"}`}>
+    <main className={`filmblock ${location.pathname === '/saved-movies' && "filmblock_saved"}`}>
       <div className="filmblock__grid">
         {films.map((film) => (
           <Film
@@ -30,7 +30,7 @@ function Filmblock({ isSaved }) {
           />
         ))}
       </div>
-    </section>
+    </main>
   );
 }
 

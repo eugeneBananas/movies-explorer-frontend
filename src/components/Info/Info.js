@@ -79,7 +79,7 @@ function Info() {
           <Link to="/" className="info__student-github">
             Github
           </Link>
-          <img src={image} className="info__student-image" alt="Фото" />
+          <img src={image} className="info__student-image" alt="Фото студента" />
         </div>
         <h3 className="info__student-portfolio">Портфолио</h3>
         <nav className="info__student-links">
@@ -104,4 +104,4 @@ function Info() {
   );
 }
 
-export default Info;
+// export default Info;

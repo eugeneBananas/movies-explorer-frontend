@@ -8,7 +8,7 @@ function AboutMe() {
     <section className="aboutme" id="student">
       <h2 className="aboutme__title">Студент</h2>
       <div className="aboutme__grid">
-        <p className="aboutme__name">Виталий</p>
+        <h3 className="aboutme__name">Виталий</h3>
         <p className="aboutme__about">Фронтенд-разработчик, 30 лет</p>
         <p className="aboutme__text">
           Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня
@@ -28,30 +28,36 @@ function AboutMe() {
       </div>
       <h3 className="aboutme__portfolio">Портфолио</h3>
       <nav className="aboutme__links">
-        <Link
-          to="https://github.com/eugeneBananas/how-to-learn"
-          target="_blank"
-          className="aboutme__link"
-        >
-          <p className="aboutme__textlink">Статичный сайт</p>
+        <div className="aboutme__link">
+          <Link
+            to="https://github.com/eugeneBananas/how-to-learn"
+            target="_blank"
+            className="aboutme__text"
+          >
+            <p className="aboutme__textlink">Статичный сайт</p>
+          </Link>
           <button type="button" className="aboutme__button"></button>
-        </Link>
+        </div>
+        <div className="aboutme__link">
         <Link
           to="https://github.com/eugeneBananas/russian-travel"
           target="_blank"
-          className="aboutme__link"
+          className="aboutme__text"
         >
           <p className="aboutme__textlink">Адаптивный сайт</p>
-          <button type="button" className="aboutme__button"></button>
         </Link>
+        <button type="button" className="aboutme__button"></button>
+        </div>
+        <div className="aboutme__link aboutme__link_decoration_none">
         <Link
           to="https://github.com/eugeneBananas/react-mesto-api-full-gha"
           target="_blank"
-          className="aboutme__link aboutme__link_decoration_none"
+          className="aboutme__text"
         >
           <p className="aboutme__textlink">Одностраничное приложение</p>
-          <button type="button" className="aboutme__button"></button>
         </Link>
+        <button type="button" className="aboutme__button"></button>
+        </div>
       </nav>
     </section>
   );

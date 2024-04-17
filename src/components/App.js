@@ -1,8 +1,14 @@
 import React, { useState, Link, useEffect, useContext } from "react";
-import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  Navigate,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 import Header from "./Header/Header.js";
-import Startblock from "./Startblock/Startblock.js";
-import Info from "./Info/Info.js";
+// import Startblock from "./Startblock/Startblock.js";
+// import Info from "./Info/Info.js";
 import Footer from "./Footer/Footer.js";
 import Main from "./Main/Main.js";
 import Search from "./Search/Search.js";
@@ -14,7 +20,17 @@ import NotFoundedPage from "./NotFoundedPage/NotFoundedPage.js";
 import { UserState } from "../contexts/IsUserLoggedIn.js";
 
 export default function App() {
+  const location = useLocation();
   const [loggedIn, setLoggedIn] = useState(false);
+  const [checkedBurgerMenu, setCheckedBurgerMenu] = useState(false);
+
+  useEffect(() => {
+    if (checkedBurgerMenu) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [checkedBurgerMenu]);
 
   return (
     <UserState.Provider value={loggedIn}>
@@ -23,8 +39,10 @@ export default function App() {
           path="/"
           element={
             <>
-              <Header />
-              <Startblock />
+              <Header
+                checkedBurgerMenu={checkedBurgerMenu}
+                setCheckedBurgerMenu={setCheckedBurgerMenu}
+              />
               <Main />
               <Footer />
             </>
@@ -34,7 +52,10 @@ export default function App() {
           path="/movies"
           element={
             <>
-              <Header />
+              <Header
+                checkedBurgerMenu={checkedBurgerMenu}
+                setCheckedBurgerMenu={setCheckedBurgerMenu}
+              />
               <Search />
               <Filmblock />
               <ButtonMore />
@@ -46,7 +67,10 @@ export default function App() {
           path="/saved-movies"
           element={
             <>
-              <Header />
+              <Header
+                checkedBurgerMenu={checkedBurgerMenu}
+                setCheckedBurgerMenu={setCheckedBurgerMenu}
+              />
               <Search />
               <Filmblock />
               <Footer />
@@ -57,8 +81,11 @@ export default function App() {
           path="/profile"
           element={
             <>
-              <Header />
-              <Account setLoggedIn={setLoggedIn}/>
+              <Header
+                checkedBurgerMenu={checkedBurgerMenu}
+                setCheckedBurgerMenu={setCheckedBurgerMenu}
+              />
+              <Account setLoggedIn={setLoggedIn} />
             </>
           }
         />
@@ -66,7 +93,7 @@ export default function App() {
           path="/signin"
           element={
             <>
-              <Register setLoggedIn={setLoggedIn}/>
+              <Register setLoggedIn={setLoggedIn} />
             </>
           }
         />

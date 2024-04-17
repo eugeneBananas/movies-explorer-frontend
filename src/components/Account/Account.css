@@ -8,7 +8,6 @@
 
 .account__hello{
     margin-top: 74px;
-    font-family: Inter;
     font-size: 24px;
     font-weight: 400;
     line-height: 29px;
@@ -70,7 +69,6 @@
 }
 
 .account__text{
-    font-family: Inter;
     font-size: 11px;
     font-weight: 500;
     line-height: 13px;
@@ -81,7 +79,6 @@
     cursor: text;
     width: 122px;
     text-align: right;
-    font-family: Inter;
     font-size: 11px;
     font-weight: 400;
     line-height: 13px;
@@ -92,7 +89,6 @@
     background-color: transparent;
     width: 130px;
     height: 16px;
-    font-family: Inter;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
@@ -121,7 +117,6 @@
 
 .account__exit{
     margin-top: 16px;
-    font-family: Inter;
     font-size: 13px;
     font-weight: 500;
     line-height: 16px;
@@ -130,6 +125,16 @@
     text-decoration: none;
     color: rgba(238, 52, 101, 1);
     margin-bottom: 70px;
+}
+
+.account__exit:hover{
+    opacity: 70%;
+    transition: .2s;
+}
+
+.account__edit:hover{
+    opacity: 70%;
+    transition: .2s;
 }
 
 @media all and (max-width: 768px){
@@ -159,7 +164,6 @@
     text-align: center;
     margin-top: 223px;
     border-radius: 3px;
-    font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;

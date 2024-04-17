@@ -5,7 +5,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { UserState } from "../../contexts/IsUserLoggedIn.js";
 
-function Header() {
+function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
   const userStatement = useContext(UserState);
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -22,12 +22,18 @@ function Header() {
     };
   }, []);
 
+  const handleCheckboxChange = (event) => {
+    setCheckedBurgerMenu(event.target.checked);
+  };
+
   return (
     <header
-      className={`header ${location.pathname === "/" && "header_startpage"}`}
+      className={`header ${location.pathname === "/" ? "header_startpage" : ""}`}
     >
+      <div className={`header__overlay ${ checkedBurgerMenu ? "header__overlay_is_checked" : ""}`}></div>
       <section className="header__container">
-        <img src={logo} className="header__logo" alt="Логотип" />
+        <Link to="/" className="header__logo"/>
+        {/* <img src={logo} className="header__logo" alt="Логотип" /> */}
         {userStatement && windowSize > 1279 && (
           <nav className="header__menu">
             <Link
@@ -67,14 +73,23 @@ function Header() {
         </Link>
       ) : (
         <div className="header__burger-box">
-          <input className="header__checkbox" type="checkbox" name="" id="" />
-          <div className="header__hamburger-lines">
+          <input
+            className={`header__checkbox`}
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            name="burger-menu"
+          />
+          <div
+            className={`header__hamburger-lines ${
+              checkedBurgerMenu && "header__hamburger-lines_is_checked"
+            }`}
+          >
             <span className="header__line header__line1"></span>
             <span className="header__line header__line2"></span>
             <span className="header__line header__line3"></span>
           </div>
           <div className="header__menu-items">
-            <div>
+            <ul className="header__ul">
               <li className="header__li-element">
                 <Link
                   className={`header__link-element ${
@@ -107,8 +122,8 @@ function Header() {
                   Сохраненные фильмы
                 </Link>
               </li>
-            </div>
-            <li className="header__li-element">
+            </ul>
+            <div className="header__li-element">
               <Link
                 to="/profile"
                 className="header__button header__button_in_burger"
@@ -116,7 +131,7 @@ function Header() {
                 <img className="header__account" src={profile} alt="Аккаунт" />
                 <p className="header__button-text">Аккаунт</p>
               </Link>
-            </li>
+            </div>
           </div>
         </div>
       )}

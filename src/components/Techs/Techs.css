@@ -1,6 +1,5 @@
 .techs__title{
   margin: 0;
-  font-family: Inter;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -44,7 +43,6 @@
 
 .techs__7tech{
   margin: 90px 0 0;
-  font-family: Inter;
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -68,7 +66,6 @@
 
 .techs__subtitle{
   margin: 26px 0 0;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -103,7 +100,7 @@
 
 @media all and (max-width: 768px){
   .techs__technologies{
-    margin: 83px 52px 0;
+    margin: 83px auto 0;
   }
 }
 
@@ -115,11 +112,12 @@
 
 @media all and (max-width: 480px){
   .techs__technologies{
-    margin-top: 50px;
+    margin: 50px 52px 0;
   }
 }
 
 .techs__technology{
+  list-style: none;
   background: rgba(232, 232, 232, 1);
   margin: 0;
   padding: 21px 0 0;
@@ -128,7 +126,6 @@
   text-align: center;
   box-sizing: border-box;
   border-radius: 10px;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -136,21 +133,16 @@
   text-align: center;
 }
 
-@media all and (max-width: 768px){
-  .techs__technology{
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
-@media all and (max-width: 480px){
+@media all and (max-width: 830px){
   .techs__technology{
     width: 84px;
     height: 57px;
+    font-size: 12px;
+    line-height: 15px;
 }
 }
 
-@media all and (max-width: 325px){
+@media all and (max-width: 411.5px){
   .techs__technology_box_last{
     margin-right: 94px;
   }

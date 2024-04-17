@@ -28,8 +28,8 @@ function Film({ setLoggedIn }) {
   };
 
   return (
-    <section className="account">
-      <p className="account__hello">Привет, Виталий!</p>
+    <main className="account">
+      <h1 className="account__hello">Привет, Виталий!</h1>
       <form className="account__form">
         <label className="account__name">
           <span className="account__text">Имя</span>
@@ -77,6 +77,7 @@ function Film({ setLoggedIn }) {
           isButtonClicked && "account__edit_display_none"
         }`}
         onClick={handleButtonClick}
+        type="button"
       >
         Редактировать
       </button>
@@ -89,7 +90,7 @@ function Film({ setLoggedIn }) {
       >
         Выйти из аккаунта
       </Link>
-    </section>
+    </main>
   );
 }
 

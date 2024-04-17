@@ -27,7 +27,6 @@
 }
 
 .entry-form__span{
-  font-family: Inter;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
@@ -38,7 +37,6 @@
   all: unset;
   cursor: text;
   margin-top: 5px;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -47,7 +45,6 @@
 }
 
 .entry-form__error{
-  font-family: Inter;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
@@ -67,12 +64,16 @@
   height: 45px;
   background: rgba(52, 86, 243, 1);
   color: white;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 45px;
   text-align: center;
   border-radius: 3px;
+}
+
+.entry-form__button:hover{
+  opacity: 80%;
+  transition: .2s;
 }
 
 @media all and (max-width: 480px){
@@ -108,7 +109,6 @@
 
 .entry-form__change-span{
   margin-right: 6px;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -117,12 +117,16 @@
 
 .entry-form__change-link{
   margin-right: 6px;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   color: rgba(52, 86, 243, 1);
   text-decoration: none;
+}
+
+.entry-form__change-link:hover{
+  opacity: 70%;
+  transition: .2s;
 }
 
 @media all and (max-width: 480px){

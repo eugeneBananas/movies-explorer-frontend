@@ -1,6 +1,6 @@
 .filmblock{
     background: rgba(250, 250, 250, 1);
-    padding: 70px 70px 30px;
+    padding: 24px 70px 30px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -27,10 +27,12 @@
 }
 
 .filmblock__grid{
+    padding-top: 80px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: 32px 20px;
+    border-top: 1px solid rgba(232, 232, 232, 1);
 }
 
 @media all and (max-width: 1279px){
@@ -42,7 +44,6 @@
 @media all and (max-width: 1000px){
     .filmblock__grid{
         padding-top: 80px;
-        border-top: 1px solid rgba(232, 232, 232, 1);
         grid-template-columns: repeat(2, 1fr);
         gap: 36px 30px;
     }

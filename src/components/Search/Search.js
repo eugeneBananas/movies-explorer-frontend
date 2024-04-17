@@ -2,9 +2,9 @@ import "./Search.css";
 import React from "react";
 import lupa from "../../images/lupa.svg";
 
-function Footer() {
+function Search() {
   return (
-    <section className="search">
+    <form className="search">
       <div className="search__bar">
         <img className="search__img" src={lupa} alt="Лупа" />
         <div className="search__container">
@@ -26,8 +26,8 @@ function Footer() {
           Короткометражки
         </p>
       </div>
-    </section>
+    </form>
   );
 }
 
-export default Footer;
+export default Search;

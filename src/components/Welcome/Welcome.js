@@ -9,11 +9,11 @@ function Welcome() {
   return (
     <section className="welcome">
       <img src={logo} className="welcome__logo" alt="Логотип" />
-      <h2 className="welcome__title">
+      <h1 className="welcome__title">
         {location.pathname === "/signup"
           ? "Добро пожаловать!"
           : "Рады видеть!"}
-      </h2>
+      </h1>
     </section>
   );
 }
