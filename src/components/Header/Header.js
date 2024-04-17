@@ -9,6 +9,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
   const userStatement = useContext(UserState);
   const location = useLocation();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,8 +23,9 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
     };
   }, []);
 
-  const handleCheckboxChange = (event) => {
-    setCheckedBurgerMenu(event.target.checked);
+  const handleCheckboxChange = () => {
+    setCheckedBurgerMenu(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -78,6 +80,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
             type="checkbox"
             onChange={handleCheckboxChange}
             name="burger-menu"
+            checked={isMenuOpen}
           />
           <div
             className={`header__hamburger-lines ${
@@ -96,6 +99,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
                     location.pathname === "/" && "header__link-element_chosen"
                   }`}
                   to="/"
+                  onClick={handleCheckboxChange}
                 >
                   Главная
                 </Link>
@@ -107,6 +111,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
                     "header__link-element_chosen"
                   }`}
                   to="/movies"
+                  onClick={handleCheckboxChange}
                 >
                   Фильмы
                 </Link>
@@ -118,6 +123,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
                     "header__link-element_chosen"
                   }`}
                   to="/saved-movies"
+                  onClick={handleCheckboxChange}
                 >
                   Сохраненные фильмы
                 </Link>
@@ -127,6 +133,7 @@ function Header({ checkedBurgerMenu, setCheckedBurgerMenu }) {
               <Link
                 to="/profile"
                 className="header__button header__button_in_burger"
+                onClick={handleCheckboxChange}
               >
                 <img className="header__account" src={profile} alt="Аккаунт" />
                 <p className="header__button-text">Аккаунт</p>
