@@ -1,0 +1,113 @@
+.film{
+    width: 270px;
+    height: 218px;
+    background-color: white;
+    box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media all and (max-width: 1000px){
+    .film{
+        width: 339px;
+        height: 257px;
+    }
+}
+
+@media all and (max-width: 767px){
+    .film{
+        width: 270px;
+        height: 218px;
+    }
+}
+
+@media all and (max-width: 650px){
+    .film{
+        width: 300px;
+        height: 235px;
+    }
+}
+
+.film__image{
+    width: 270px;
+    height: 151px;
+    object-fit: cover;
+}
+
+@media all and (max-width: 1000px){
+    .film__image{
+        width: 339px;
+        height: 190px;
+    }
+}
+
+@media all and (max-width: 767px){
+    .film__image{
+        width: 270px;
+        height: 151px;
+    }
+}
+
+@media all and (max-width: 650px){
+    .film__image{
+        width: 300px;
+        height: 168px;
+    }
+}
+
+.film__name{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.film__container{
+    position: relative;
+    margin: 14px 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.film__duration{
+    display: inline-block;
+    margin: 10px 0 14px 12px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    color: rgba(160, 160, 160, 1);
+}
+
+.film__button{
+    all: unset;
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.film__button:hover{
+    opacity: 80%;
+    transition: .2s;
+}
+
+.film__button_add_off{
+    background-image: url('../../images/button-add-grey.svg');
+}
+
+.film__button_add_on{
+    background-image: url('../../images/button-add-green.svg');
+}
+
+.film__button_remove_on{
+    top: 0px;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../images/cross.svg');
+}

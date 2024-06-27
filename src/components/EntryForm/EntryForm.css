@@ -1,0 +1,141 @@
+.entry-form{
+  margin: auto;
+  width: 396px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+@media all and (max-width: 768px){
+  .entry-form{
+    margin-bottom: 232px;
+  }
+}
+
+@media all and (max-width: 480px){
+  .entry-form{
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0 30px 30px;
+    box-sizing: border-box;
+  }
+}
+
+.entry-form__label{
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-form__span{
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: rgba(160, 160, 160, 1);
+}
+
+.entry-form__input{
+  all: unset;
+  cursor: text;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+
+.entry-form__error{
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  margin: 6px 0 6px;
+  color: rgba(238, 52, 101, 1);
+}
+
+.entry-form__error_display_off{
+  visibility: hidden;
+}
+
+.entry-form__button{
+  all: unset;
+  cursor: pointer;
+  margin-top: 131px;
+  width: 396px;
+  height: 45px;
+  background: rgba(52, 86, 243, 1);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.entry-form__button:hover{
+  opacity: 80%;
+  transition: .2s;
+}
+
+@media all and (max-width: 480px){
+  .entry-form__button{
+    margin: 216px auto 0;
+    width: 260px;
+    height: 45px;
+    font-size: 12px;
+  }
+}
+
+.entry-form__button_extended{
+  margin-top: 199px;
+}
+
+@media all and (max-width: 480px){
+  .entry-form__button_extended{
+    margin-top: 285px;
+  }
+}
+
+.entry-form__container{
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (max-width: 480px){
+  .entry-form__container{
+    margin-top: 14px;
+  }
+}
+
+.entry-form__change-span{
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: rgba(160, 160, 160, 1);
+}
+
+.entry-form__change-link{
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: rgba(52, 86, 243, 1);
+  text-decoration: none;
+}
+
+.entry-form__change-link:hover{
+  opacity: 70%;
+  transition: .2s;
+}
+
+@media all and (max-width: 480px){
+  .entry-form__change-span{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .entry-form__change-link{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

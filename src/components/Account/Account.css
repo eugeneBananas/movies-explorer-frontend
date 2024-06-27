@@ -1,0 +1,181 @@
+.account{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account__hello{
+    margin-top: 74px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+@media all and (max-width: 768px){
+    .account__hello{
+        margin-top: 236px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .account__hello{
+        margin-top: 70px;
+    }
+}
+
+.account__form{
+    margin-top: 99px;
+}
+
+@media all and (max-width: 768px){
+    .account__form{
+        margin-top: 72px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .account__form{
+        margin-top: 56px;
+    }
+}
+
+.account__name{
+    display: flex;
+    width: 410px;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(232, 232, 232, 1);
+}
+
+@media all and (max-width: 480px){
+    .account__name{
+        width: 260px;
+    }
+}
+
+.account__email{
+    display: flex;
+    margin-top: 17px;
+    width: 410px;
+    justify-content: space-between;
+}
+
+@media all and (max-width: 480px){
+    .account__email{
+        width: 260px;
+    }
+}
+
+.account__text{
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+}
+
+.account__input{
+    all: unset;
+    cursor: text;
+    width: 122px;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+}
+
+.account__edit{
+    all: unset;
+    background-color: transparent;
+    width: 130px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 220px;
+}
+
+@media all and (max-width: 768px){
+    .account__edit{
+        margin-top: 210px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .account__edit{
+        margin-top: 379px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+.account__edit_display_none{
+    display: none;
+}
+
+.account__exit{
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    color: rgba(238, 52, 101, 1);
+    margin-bottom: 70px;
+}
+
+.account__exit:hover{
+    opacity: 70%;
+    transition: .2s;
+}
+
+.account__edit:hover{
+    opacity: 70%;
+    transition: .2s;
+}
+
+@media all and (max-width: 768px){
+    .account__exit{
+        margin-bottom: 269px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .account__exit{
+        font-size: 12px;
+        line-height: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+.account__exit_display_none{
+    display: none;
+}
+
+.account__save{
+    all: unset;
+    width: 410px;
+    height: 45px;
+    color: white;
+    background-color: rgba(52, 86, 243, 1);
+    text-align: center;
+    margin-top: 223px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 768px){
+    .account__save{
+        margin-top: 210px;
+    }
+}
+
+.account__save_display_none{
+    display: none;
+}
